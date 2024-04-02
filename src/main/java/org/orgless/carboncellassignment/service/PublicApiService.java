@@ -35,8 +35,8 @@ public class PublicApiService {
         final List<ApiEntry> allEntries = parser.parse(response.body());
 
         final String category = infoDto.getCategory();
-        Integer temp = infoDto.getMaxEntries();
-        if(temp == null || temp < 1)
+        int temp = infoDto.getMaxEntries() == null? Integer.MAX_VALUE: infoDto.getMaxEntries();
+        if(temp < 1)
             throw new IllegalArgumentException("Either maxEntries were not passed or were invalid. maxEntries must be a positive integer");
 
         return allEntries.stream()

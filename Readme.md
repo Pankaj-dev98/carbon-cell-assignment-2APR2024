@@ -15,7 +15,7 @@ It also includes securing API endpoints for authenticated users only.
 
 Before running the application, ensure you have the following installed:
 
-- Java Development Kit (JDK)
+- Java Development Kit v22 (JDK) [Ensure that the run configuration can handle compilation on JDK22]
 - Maven
 - Postman or any internet browser
 
